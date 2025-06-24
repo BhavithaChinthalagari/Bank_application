@@ -1,87 +1,102 @@
-# Bank_application using Docker
- Simple Banking Application (Flask + SQLite + Docker)
-📌 Objective
+# 🏦 Simple Banking Application (Flask + SQLite + Docker)
+
+## 📌 Objective
 The goal of this project is to demonstrate a basic banking application that allows users to:
 
-Create new accounts
+- Create new accounts
 
-Check account balance
+- Check account balance
 
-Deposit and withdraw money
+- Deposit and withdraw money
 
-View transaction statements
+- View transaction statements
 
 This lightweight app showcases fundamental backend development concepts using Flask, SQLite, and HTML templating — ideal for learning or teaching beginner-level web development and database operations.
 
-🛠 Tech Stacks
-Backend: Python 3, Flask
 
-Database: SQLite
+## 🛠 Tech Stacks
+- Backend: Python 3, Flask
 
-Frontend: HTML (rendered with Flask templates)
+- Database: SQLite
 
-Containerization: Docker
+- Frontend: HTML (rendered with Flask templates)
 
-Browser-based UI: Runs locally via Flask routes
+- Containerization: Docker
 
-🔄 Steps Included
-1. Database Initialization
-Two tables are created:
+- Browser-based UI: Runs locally via Flask routes
 
-accounts: stores user info and balance
 
-transactions: logs deposits and withdrawals
+## 🔄 Steps Included
 
-2. Web Interface Functionalities
-/create: Create a new bank account
+## 1. Database Initialization
 
-/balance: Check the balance using account ID
+- Two tables are created:
 
-/deposit: Deposit money to an account
+- accounts: stores user info and balance
 
-/withdraw: Withdraw money after checking balance
+- transactions: logs deposits and withdrawals
 
-/statement: View recent transactions for an account
+## 2. Web Interface Functionalities
 
-3. Flask App Execution
-All functionalities are wrapped under Flask routes.
+- `/create`: Create a new bank account
 
-Database operations are securely performed using SQLite.
+- `/balance`: Check the balance using account ID
 
-HTML content is rendered via Flask’s render_template_string.
+- `/deposit`: Deposit money to an account
 
-4. Docker Integration
-Dockerfile provided to containerize the app.
+- `/withdraw`: Withdraw money after checking balance
 
-Exposes port 5002 to run on http://localhost:5002.
+- `/statement`: View recent transactions for an account
 
-📊 Key Insights
-Demonstrates CRUD operations using Python + SQLite.
+## 3. Flask App Execution
 
-Emphasizes form handling and routing in Flask.
+- All functionalities are wrapped under Flask routes.
 
-Shows basic transaction logic, such as preventing withdrawals if balance is insufficient.
+- Database operations are securely performed using SQLite.
 
-UI is beginner-friendly and functional, rendered using inline HTML.
+- HTML content is rendered via Flask’s render_template_string.
 
-Portable: Easily deployable using Docker.
+## 4. Docker Integration
 
-🚀 How to Run (Locally using Docker)
+- Dockerfile provided to containerize the app.
+
+- Exposes port 5002 to run on http://localhost:5002.
+
+
+## 📊 Key Insights
+- Demonstrates CRUD operations using Python + SQLite.
+
+- Emphasizes form handling and routing in Flask.
+
+- Shows basic transaction logic, such as preventing withdrawals if balance is insufficient.
+
+- UI is beginner-friendly and functional, rendered using inline HTML.
+
+- Portable: Easily deployable using Docker.
+
+
+## 🚀 How to Run (Locally using Docker)
+```
 # Build Docker image
 docker build -t banking-app .
 
 # Run the container
 docker run -d -p 5002:5002 banking-app
-Access it at: http://localhost:5002
-📁 Project Structure
+```
+- Access it at: http://localhost:5002
+
+
+## 📁 Project Structure
+```
 .
 ├── app.py          # Main Flask application
 ├── Dockerfile      # Container configuration
 ├── bank.db         # SQLite database (auto-created on first run)
+```
+
 ✅ Additional Notes
+- Educational Use: Ideal for beginner students learning web development and SQL.
 
-Educational Use: Ideal for beginner students learning web development and SQL.
+- Extendable: Can be enhanced with login, encryption, or using a production database like PostgreSQL.
 
-Extendable: Can be enhanced with login, encryption, or using a production database like PostgreSQL.
-
-Security Note: This is a demo app; sensitive data handling and authentication are not included.
+- Security Note: This is a demo app; sensitive data handling and authentication are not included.
